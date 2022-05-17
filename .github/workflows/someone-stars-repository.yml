@@ -26,5 +26,4 @@ jobs:
         git config --global user.name "dinhphuc" 
         git add .
         git commit -m "Someone has star -> Updated README.md" || echo "Someone has star"
-        git pull
         git push
