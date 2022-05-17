@@ -40,14 +40,17 @@ const generate = async () => {
     });
     tdData = "";
   } else {
-    tdData += Util.replaceTemplateWithParams(templateTd, stargazer);
-    if (index % 2 !== 0) {
-      trData += Util.replaceTemplateWithParams(templateTr, {
-        td_data: tdData
-      });
-      tdData = "";
-    }
+    stargazers.forEach((stargazer, index) => {
+      tdData += Util.replaceTemplateWithParams(templateTd, stargazer);
+      if (index % 2 !== 0) {
+        trData += Util.replaceTemplateWithParams(templateTr, {
+          td_data: tdData
+        });
+        tdData = "";
+      }
+    });
   }
+
   const ReadMeContent = Util.replaceTemplateWithParams(templateTable, {
     tr_data: trData
   });
