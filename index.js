@@ -4,7 +4,7 @@ const Util = require("./utils")
 
 const getStargazers = async () => {
   try {
-    const { data } = await axios.get("https://api.github.com/repos/dinhphuc/chatbot/stargazers");
+    const { data } = await axios.get("https://api.github.com/repos/dinhphuc/you-came-here/stargazers");
 
     if (data && Array.isArray(data)) {
       return data.map(stargazer => {
