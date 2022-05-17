@@ -1,8 +1,8 @@
 name: someone-stars-repository
-
 concurrency:
+  group: product
   cancel-in-progress: true
-
+  
 on:
   workflow_dispatch:
   watch:
