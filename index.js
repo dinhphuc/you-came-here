@@ -51,6 +51,13 @@ const generate = async () => {
     });
   }
 
+  if (stargazers.length % 2 !== 0) {
+    trData += Util.replaceTemplateWithParams(templateTr, {
+      td_data: tdData
+    });
+    tdData = "";
+  }
+
   const ReadMeContent = Util.replaceTemplateWithParams(templateTable, {
     tr_data: trData
   });

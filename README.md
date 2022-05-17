@@ -25,5 +25,19 @@
                 src="https://github-readme-stats.vercel.app/api?username=phucnd-synpleteam&show_icons=true&theme=buefy " />
         </a>
 </td> 
+</tr> <tr>
+     <td align="center">
+        <a href="https://github.com/ruamin">
+            <img src="https://avatars.githubusercontent.com/u/32478921?v=4" width="100px;" alt="ruamin" />
+        </a>
+        <br />
+        <a href="https://github.com/ruamin">ruamin</a>
+    </td>
+<td align="center">
+        <a href="https://github.com/ruamin">
+             <img align="center"
+                src="https://github-readme-stats.vercel.app/api?username=ruamin&show_icons=true&theme=buefy " />
+        </a>
+</td> 
 </tr> 
 </table>
