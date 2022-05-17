@@ -23,7 +23,8 @@ jobs:
     - name: Update README.md
       run: |
         git config --global user.email "minhphucpk.1997@gmail.com"
-        git config --global user.name "dinhphuc"
+        git config --global user.name "dinhphuc" 
         git add .
         git commit -m "Someone has star -> Updated README.md" || echo "Someone has star"
+        git pull
         git push
