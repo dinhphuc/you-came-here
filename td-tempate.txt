@@ -1,0 +1,13 @@
+<td align="center">
+        <a href="https://github.com/{{login}}">
+            <img src="{{avatar_url}}" width="100px;" alt="{{login}}" />
+        </a>
+        <br />
+        <a href="https://github.com/{{login}}">{{login}}</a>
+    </td>
+<td align="center">
+        <a href="https://github.com/{{login}}">
+             <img align="center"
+                src="https://github-readme-stats.vercel.app/api?username={{login}}&show_icons=true&theme=buefy " />
+        </a>
+</td>
