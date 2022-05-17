@@ -5,7 +5,7 @@ const Util = require("./utils")
 const getStargazers = async () => {
   try {
     const { data } = await axios.get("https://api.github.com/repos/dinhphuc/you-came-here/stargazers");
-
+    console.log(data);
     if (data && Array.isArray(data)) {
       return data.map(stargazer => {
         return {
@@ -33,7 +33,13 @@ const generate = async () => {
   let trData = "";
   let tdData = "";
 
-  stargazers.forEach((stargazer, index) => {
+  if (stargazers.length === 1) {
+    tdData += Util.replaceTemplateWithParams(templateTd, stargazers[0]);
+    trData += Util.replaceTemplateWithParams(templateTr, {
+      td_data: tdData
+    });
+    tdData = "";
+  } else {
     tdData += Util.replaceTemplateWithParams(templateTd, stargazer);
     if (index % 2 !== 0) {
       trData += Util.replaceTemplateWithParams(templateTr, {
@@ -41,8 +47,7 @@ const generate = async () => {
       });
       tdData = "";
     }
-  });
-
+  }
   const ReadMeContent = Util.replaceTemplateWithParams(templateTable, {
     tr_data: trData
   });
